@@ -3,7 +3,13 @@ let express = require("express");
 
 //Initialize the app
 let app = express();
-app.use(express.urlencoded({extended:true}));
+
+
+app.use(express.static('public'));
+app.use(express.urlencoded({//permet d'utiliser les use
+    extended : true
+}));
+
 
 
 let router = require('./route');

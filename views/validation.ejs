@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Validation</title>
 </head>
 <body>
@@ -10,11 +10,12 @@
         <h1>Validation des réservations</h1>
 
         <div id="destination">
-            <h3>Destination :  </h3>
+            <h3>Destination : <%= destinat %>  </h3>
         </div>
         
         <div id="persons">
             <h3>Liste des passagers</h3>
+
             <ul>
 
             </ul>
@@ -22,7 +23,10 @@
         <form>
             <div>
                 <input type="submit" value="Etape suivante" formaction="/confirmation" formmethod="post">
-                <input type="submit" value="Annuler la réservation" formaction="/" formmethod="get">
+                <form action="/annuler" id="form2" method="post">
+                    <input type="submit" value="Annuler la réservation" formaction="/" formmethod="get">
+                </form>
+                
             </div>
         </form>
     </div>

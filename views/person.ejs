@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Identification des personnes</title>
 </head>
 <body>
@@ -20,7 +20,9 @@
             
             <div>
                 <input type="submit" value="Etape suivante">
-                <input type="submit" value="Annuler la réservation" formaction="/" formmethod="get">
+                <form action="/annuler" id="form2" method="post">
+                    <input type="submit" value="Annuler la réservation" formaction="/" formmethod="get">
+                </form>
             </div>
         </form>
     </div>

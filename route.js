@@ -7,7 +7,10 @@ let userController = require('./controllers/userControllers');
 router.get('/',(req,res)=>res.redirect('/reservation'));
 
 router.get('/reservation', userController.reservation);
-
+router.post('/new',userController.next);
+router.post('/persons',userController.next1);
+router.post('/index',userController.total)
+// router.post('confirmation',userController.next2);
 
 
 

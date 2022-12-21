@@ -2,13 +2,13 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Réservation</title>
 </head>
 <body>
     <div id="content">
         <h1>Réservation</h1>
-        <form method="post" id="form1" action="/">
+        <form method="POST" id="form1" action="/new">
             <div>
                 <label for="destination">Destination</label>
                 <input type="text" name="destination" required>
@@ -23,10 +23,12 @@
                 </radio>
             </div>
             <div>
-                <input type="submit" value="Etape suivante">
+                <input type="submit" value="Etape suivante"  >
             </div>
-        </form>
+        </form method="post" action="/index">
         <button id="bt_total">Caculer le total</button>
+        </form>
+        <p><%= statut %> </p>
         <div id="total"></div>
     </div>
     <script src="util.js"></script>

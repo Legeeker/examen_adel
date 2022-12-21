@@ -7,6 +7,13 @@ app.use(express.urlencoded({extended:true}));
 
 
 let router = require('./route');
+let session = require('express-session');
+app.use(session({
+    secret: 'my secret',
+    resave: false,
+    saveUninitialized: true
+
+}));
 
 
 
